@@ -6,6 +6,7 @@ import json
 from typing import List
 import re
 from mongoengine import Q
+from pydantic import BaseModel
 from collections import Counter
 router = APIRouter()
 
@@ -46,7 +47,8 @@ async def getSinger():
         separated_list = re.split(r'\s*\|\s*|\s*-\s*', str(v.singer))
         separated_list = [item for item in separated_list if item]
         rawsinger.append(separated_list[0])
-        string_counts = Counter(rawsinger)
+        
+    string_counts = Counter(rawsinger)
     duplicates = [string for string, count in string_counts.items() if count > 1]
     sorted_names = sorted([name.strip() for name in duplicates], key=str.lower)
     
@@ -55,11 +57,16 @@ async def getSinger():
         "data":sorted_names,
         "status":True
     }
-@router.get("/api/v1/get-song/{singername}", )
-async def getSonge(singername: str, limit: int = Query(10, ge=1), offset: int = Query(0, ge=0)):
+
+
+class SingerSearch(BaseModel):
+    singername: str
+    
+@router.post("/api/v1/get-song", )
+async def getSonge(body: SingerSearch, limit: int = Query(10, ge=1), offset: int = Query(0, ge=0)):
     try:
         # Query the database for songs matching the singer name, with pagination
-        findata = SongsTable.objects(singer__icontains=singername).skip(offset).limit(limit).all()
+        findata = SongsTable.objects(singer__icontains=body.singername.replace(",", "")).skip(offset).limit(limit).all()
 
         if not findata:
             raise HTTPException(status_code=404, detail="No songs found for the given singer")
