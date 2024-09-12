@@ -14,3 +14,8 @@ app.include_router(songs.router, tags=["songs Apis"])
 app.include_router(user.router, tags=["user Apis"])
 app.include_router(playlsit.router, tags=["playlist Apis"])
 app.include_router(artitstroutes.router, tags=["Artist APis"])
+
+
+if __name__ == "__main__":
+    import uvicorn
+    uvicorn.run("main:app", host="0.0.0.0", port=8080, reload=True)
