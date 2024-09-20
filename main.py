@@ -4,6 +4,7 @@ from song.routes import songs
 from user.routes import user
 from playlist.routes import playlsit
 from artiis.routes import artitstroutes
+from song.routes import suggesationsongroute
 connect(db="SocialMedia", alias="db1", host="mongodb+srv://avbigbuddy:nZ4ATPTwJjzYnm20@cluster0.wplpkxz.mongodb.net/SocialMedia")
 
 # Connect tomu the second database
@@ -14,8 +15,9 @@ app.include_router(songs.router, tags=["songs Apis"])
 app.include_router(user.router, tags=["user Apis"])
 app.include_router(playlsit.router, tags=["playlist Apis"])
 app.include_router(artitstroutes.router, tags=["Artist APis"])
+app.include_router(suggesationsongroute.router, tags=["Suggestion song"])
 
 
 if __name__ == "__main__":
     import uvicorn
-    uvicorn.run("main:app", host="0.0.0.0", port=8080, reload=True)
+    uvicorn.run("main:app", host="127.0.0.1", port=8080, reload=True)

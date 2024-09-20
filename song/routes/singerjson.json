@@ -1,0 +1,293 @@
+{
+    "singers": [
+      {
+        "name": "(G)I",
+        "emotions": ["energy", "confidence", "empowerment"]
+      },
+      {
+        "name": "5 Seconds of Summer",
+        "emotions": ["rebellion", "nostalgia", "youthful angst"]
+      },
+      {
+        "name": "A.R. Rahman",
+        "emotions": ["spirituality", "inspiration", "joy", "serenity"]
+      },
+      {
+        "name": "Aastha Gill",
+        "emotions": ["fun", "joy", "celebration"]
+      },
+      {
+        "name": "Adam Levine",
+        "emotions": ["love", "passion", "heartbreak"]
+      },
+      {
+        "name": "Adele",
+        "emotions": ["heartbreak", "melancholy", "empowerment"]
+      },
+      {
+        "name": "Aditya Narayan",
+        "emotions": ["romance", "joy", "love"]
+      },
+      {
+        "name": "Alejandro Sanz",
+        "emotions": ["passion", "melancholy", "romance"]
+      },
+      {
+        "name": "Alka Yagnik",
+        "emotions": ["love", "devotion", "romance"]
+      },
+      {
+        "name": "Amit Trivedi",
+        "emotions": ["energy", "melancholy", "joy", "inspiration"]
+      },
+      {
+        "name": "Anirudh Ravichander",
+        "emotions": ["energy", "celebration", "joy"]
+      },
+      {
+        "name": "Apink",
+        "emotions": ["happiness", "sweetness", "innocence"]
+      },
+      {
+        "name": "April",
+        "emotions": ["joy", "innocence", "youthfulness"]
+      },
+      {
+        "name": "Ariana Grande",
+        "emotions": ["love", "empowerment", "heartbreak", "confidence"]
+      },
+      {
+        "name": "Arijit Singh",
+        "emotions": ["melancholy", "romance", "longing", "love"]
+      },
+      {
+        "name": "Arko",
+        "emotions": ["love", "romance", "sadness"]
+      },
+      {
+        "name": "Armaan Malik",
+        "emotions": ["romance", "love", "melancholy"]
+      },
+      {
+        "name": "Asees Kaur",
+        "emotions": ["devotion", "love", "joy"]
+      },
+      {
+        "name": "Astro",
+        "emotions": ["happiness", "excitement", "joy"]
+      },
+      {
+        "name": "Ateez",
+        "emotions": ["energy", "rebellion", "determination"]
+      },
+      {
+        "name": "Atif Aslam",
+        "emotions": ["romance", "melancholy", "longing", "love"]
+      },
+      {
+        "name": "AUR",
+        "emotions": ["introspection", "dreaminess", "mystery"]
+      },
+      {
+        "name": "Avicii",
+        "emotions": ["joy", "celebration", "inspiration"]
+      },
+      {
+        "name": "Avril Lavigne",
+        "emotions": ["rebellion", "youthful angst", "empowerment"]
+      },
+      {
+        "name": "B Praak",
+        "emotions": ["melancholy", "heartbreak", "longing"]
+      },
+      {
+        "name": "B.A.P",
+        "emotions": ["power", "anger", "determination"]
+      },
+      {
+        "name": "B1A4",
+        "emotions": ["joy", "love", "innocence"]
+      },
+      {
+        "name": "Badshah",
+        "emotions": ["celebration", "confidence", "fun"]
+      },
+      {
+        "name": "Barnali Chattopadhyay",
+        "emotions": ["love", "devotion", "romance"]
+      },
+      {
+        "name": "Benny Dayal",
+        "emotions": ["joy", "celebration", "energy"]
+      },
+      {
+        "name": "Benson Boone",
+        "emotions": ["heartbreak", "introspection", "love"]
+      },
+      {
+        "name": "Bigbang",
+        "emotions": ["energy", "power", "confidence"]
+      },
+      {
+        "name": "Billie Eilish",
+        "emotions": ["introspection", "anxiety", "sadness"]
+      },
+      {
+        "name": "Blackpink",
+        "emotions": ["empowerment", "confidence", "energy"]
+      },
+      {
+        "name": "Brave Girls",
+        "emotions": ["happiness", "hope", "joy"]
+      },
+      {
+        "name": "Bruno Mars",
+        "emotions": ["joy", "love", "celebration"]
+      },
+      {
+        "name": "BTS",
+        "emotions": ["hope", "self-love", "motivation", "joy"]
+      },
+      {
+        "name": "Calvin Harris",
+        "emotions": ["celebration", "happiness", "energy"]
+      },
+      {
+        "name": "Charlie Puth",
+        "emotions": ["love", "nostalgia", "heartbreak"]
+      },
+      {
+        "name": "Childish Gambino",
+        "emotions": ["introspection", "anger", "empowerment"]
+      },
+      {
+        "name": "CLC",
+        "emotions": ["confidence", "empowerment", "energy"]
+      },
+      {
+        "name": "Coldplay",
+        "emotions": ["hope", "dreaminess", "joy", "melancholy"]
+      },
+      {
+        "name": "Daft Punk",
+        "emotions": ["celebration", "mystery", "nostalgia"]
+      },
+      {
+        "name": "Darshan Raval",
+        "emotions": ["love", "melancholy", "romance"]
+      },
+      {
+        "name": "David Guetta",
+        "emotions": ["energy", "joy", "celebration"]
+      },
+      {
+        "name": "Dua Lipa",
+        "emotions": ["empowerment", "confidence", "love"]
+      },
+      {
+        "name": "Ed Sheeran",
+        "emotions": ["love", "romance", "nostalgia", "sadness"]
+      },
+      {
+        "name": "Ellie Goulding",
+        "emotions": ["dreaminess", "love", "hope"]
+      },
+      {
+        "name": "Eminem",
+        "emotions": ["anger", "determination", "introspection"]
+      },
+      {
+        "name": "Exo",
+        "emotions": ["love", "energy", "intensity"]
+      },
+      {
+        "name": "Flo Rida",
+        "emotions": ["celebration", "confidence", "joy"]
+      },
+      {
+        "name": "Girls' Generation",
+        "emotions": ["happiness", "innocence", "joy"]
+      },
+      {
+        "name": "Hozier",
+        "emotions": ["passion", "spirituality", "intensity"]
+      },
+      {
+        "name": "Imagine Dragons",
+        "emotions": ["hope", "empowerment", "determination"]
+      },
+      {
+        "name": "Jagjit Singh",
+        "emotions": ["melancholy", "longing", "love"]
+      },
+      {
+        "name": "Justin Bieber",
+        "emotions": ["love", "fun", "heartbreak"]
+      },
+      {
+        "name": "Katy Perry",
+        "emotions": ["empowerment", "fun", "love"]
+      },
+      {
+        "name": "Linkin Park",
+        "emotions": ["anger", "frustration", "introspection"]
+      },
+      {
+        "name": "Luis Fonsi",
+        "emotions": ["passion", "love", "celebration"]
+      },
+      {
+        "name": "Maroon 5",
+        "emotions": ["love", "heartbreak", "passion"]
+      },
+      {
+        "name": "Miley Cyrus",
+        "emotions": ["rebellion", "empowerment", "confidence"]
+      },
+      {
+        "name": "Neha Kakkar",
+        "emotions": ["love", "joy", "celebration"]
+      },
+      {
+        "name": "Pitbull",
+        "emotions": ["celebration", "confidence", "joy"]
+      },
+      {
+        "name": "Post Malone",
+        "emotions": ["introspection", "loneliness", "melancholy"]
+      },
+      {
+        "name": "Rihanna",
+        "emotions": ["confidence", "empowerment", "seduction"]
+      },
+      {
+        "name": "Sam Smith",
+        "emotions": ["heartbreak", "melancholy", "love"]
+      },
+      {
+        "name": "Shreya Ghoshal",
+        "emotions": ["love", "romance", "devotion"]
+      },
+      {
+        "name": "Sia",
+        "emotions": ["empowerment", "sadness", "resilience"]
+      },
+      {
+        "name": "Taylor Swift",
+        "emotions": ["heartbreak", "love", "empowerment", "revenge"]
+      },
+      {
+        "name": "The Weeknd",
+        "emotions": ["desire", "intensity", "melancholy"]
+      },
+      {
+        "name": "Yo Yo Honey Singh",
+        "emotions": ["celebration", "fun", "confidence"]
+      },
+      {
+        "name": "ZAYN",
+        "emotions": ["desire", "romance", "loneliness"]
+      }
+    ]
+  }
+  
