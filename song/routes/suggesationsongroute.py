@@ -65,5 +65,25 @@ async def recomidationSong(singername: str):
 
 @router.get("/api/v1/getsongs-byspeec/{query}")
 async def get_songs_by_speech(query: str):
-    songs = suggest_song(query)
-    return {"data": songs}
+   songs = suggest_song(query)
+   songslist = []
+   if songs["data"] == None and songs["status"] == None:
+      return {
+         "message": "Sorry i cant find",
+         "data":None,
+         "status":False
+       }
+   elif songs["data"] != None and songs["status"]==True:
+       for value in songs["data"]:
+          
+          perticulersong  = SongsTable.objects(Name__icontains=value["song_name"])
+          tojson = perticulersong.to_json()
+          fromjson = json.loads(tojson)
+          songslist.append(fromjson)
+   elif songs["data"] != None and songs["status"] == False:
+         return songs
+   return {
+             "message":"Here is songs according to you",
+             "data" : songslist,
+             "status":True
+          }

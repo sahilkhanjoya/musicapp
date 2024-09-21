@@ -1,6 +1,8 @@
+import json
 import pandas as pd
 import spacy
 from song.routes.ml.songsml import search_songs_by_prompt
+from song.models.songstable import SongsTable
 import random
 
 # Load the song data (replace with the correct path)
@@ -63,12 +65,15 @@ def suggest_song(prompt):
     
     if prompt_type == "specific_song":
         # Search for the song in the dataset
-        song_match = data[data['Song-Name'].str.contains(song_name, case=False, na=False)]
-        if not song_match.empty:
+        perticulersong  = SongsTable.objects(Name__icontains=song_name)
+        print(perticulersong)
+        if  perticulersong:
+            tojson = perticulersong.to_json()
+            fromjson = json.loads(tojson)
             return {
-                "data": None,
-                "message":random.choice(song_match['Song-Name'].values),
-                "status":True
+                "data": fromjson,
+                "message": "herer is osng that you searched" ,
+                "status":False
             }
         else:
             return {
@@ -84,10 +89,13 @@ def suggest_song(prompt):
             (data['Album/Movie'].str.contains(movie_name, case=False, na=False))
         ]
         if not song_match.empty:
+            perticulersong  = SongsTable.objects(Name__icontains=song_name)
+            tojson = perticulersong.to_json()
+            fromjson = json.loads(tojson)
             return {
-                "data":None,
+                "data":fromjson,
                 "message": random.choice(song_match['Song-Name'].values),
-                "status":True
+                "status":False
             }
         else:
             return {
