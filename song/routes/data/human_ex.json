@@ -1,0 +1,19 @@
+{
+    "requests": [
+        "Play some music.",
+        "Can you play music for me?",
+        "Put on some tunes.",
+        "Could you please play some music?",
+        "Would you mind playing some music?",
+        "Start playing music.",
+        "Play music now.",
+        "Play classical music.",
+        "Can you play 'Shape of You' by Ed Sheeran?",
+        "What music do you recommend?",
+        "Can you play something relaxing?",
+        "Play [song name] from the movie [movie name].",
+        "Can you play [song name] from [movie name]?",
+        "Can you play a popular song from [movie name]?",
+        "What’s a good song from [movie name]? Play it."
+    ]
+}

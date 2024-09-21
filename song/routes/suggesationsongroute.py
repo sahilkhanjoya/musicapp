@@ -4,6 +4,7 @@ from song.models.songstable import SongsTable
 from mongoengine import Q
 import pandas as pd
 from song.routes.ml.songsml import search_songs_by_prompt
+from song.routes.ml.ml import suggest_song
 router = APIRouter()
 
 with open('song/routes/singerjson.json', 'r') as file:
@@ -61,7 +62,8 @@ async def recomidationSong(singername: str):
          
 
 # FastAPI route for handling song search
+
 @router.get("/api/v1/getsongs-byspeec/{query}")
 async def get_songs_by_speech(query: str):
-    songs = search_songs_by_prompt(query)
-    return {"songs": songs}
+    songs = suggest_song(query)
+    return {"data": songs}
