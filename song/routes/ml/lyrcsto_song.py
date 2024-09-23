@@ -14,4 +14,4 @@ def find_song_by_lyrics(snippet):
     # Perform a search for the lyrics snippet
     matching_songs = song_data[song_data['lyrics'].str.contains(snippet, na=False)]
     
-    return matching_songs[['songs', 'singer', 'lyrics']]
+    return matching_songs[['songs']].reset_index(drop=True)

@@ -99,7 +99,7 @@ async def searchSongBy(lyrcs: str):
         "staus":True
        }  # Adjust the column names if necessary
    else:
-    {
+    return {
         "message": "Song not found",
         "data": None,
         "staus":False

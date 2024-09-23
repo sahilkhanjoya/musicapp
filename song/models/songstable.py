@@ -8,6 +8,7 @@ class SongsTable(Document):
     image = StringField(required=True)
     songsaudio = StringField(required=True)
     singer = StringField(required=True)
+    lyrics = StringField(required=False)
     meta = {'db_alias': 'db1'}
 
 
