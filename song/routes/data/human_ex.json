@@ -9,11 +9,11 @@
         "Play music now.",
         "Play classical music.",
         "Can you play 'Shape of You' by Ed Sheeran?",
-        "What music do you recommend?",
+         "What music do you recommend?",
         "Can you play something relaxing?",
         "Play [song name] from the movie [movie name].",
-        "Can you play [song name] from [movie name]?",
-        "Can you play a popular song from [movie name]?",
-        "What’s a good song from [movie name]? Play it."
+      "Can you play [song name] from [movie name]?",
+       "Can you play a popular song from [movie name]?",
+      "What’s a good song from [movie name]? Play it."
     ]
 }

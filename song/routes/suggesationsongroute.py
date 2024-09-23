@@ -5,6 +5,7 @@ from mongoengine import Q
 import pandas as pd
 from song.routes.ml.songsml import search_songs_by_prompt
 from song.routes.ml.ml import suggest_song
+from song.routes.ml.lyrcsto_song import find_song_by_lyrics
 router = APIRouter()
 
 with open('song/routes/singerjson.json', 'r') as file:
@@ -87,3 +88,19 @@ async def get_songs_by_speech(query: str):
              "data" : songslist,
              "status":True
           }
+   
+@router.get("/api/v1/search-song-by/{lyrcs}")
+async def searchSongBy(lyrcs: str):
+   matching_songs = find_song_by_lyrics(lyrcs)
+   if not matching_songs.empty:
+    return {
+        "message": "Song found",
+        "data": matching_songs,
+        "staus":True
+       }  # Adjust the column names if necessary
+   else:
+    {
+        "message": "Song not found",
+        "data": None,
+        "staus":False
+       }
