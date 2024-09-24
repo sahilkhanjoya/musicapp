@@ -1,7 +1,7 @@
 from fastapi import APIRouter
 import json
 from song.models.songstable import SongsTable
-
+import random
 from mongoengine import Q
 import pandas as pd
 from song.routes.ml.songsml import search_songs_by_prompt
@@ -110,7 +110,8 @@ async def searchSongBy(lyrcs: str):
           fromjson = json.loads(tojson)
           songslist.append(fromjson)
           
-     
+      
+      
       return {
              "message":"Here is songs according to you",
              "data" : songslist,
@@ -127,6 +128,7 @@ async def searchSongBy(lyrcs: str):
            findSong = SongsTable.objects(Name=songDataJson[0]["songs"])
            tojson  = findSong.to_json()
            fromjson = json.loads(tojson),
+           random.shuffle(fromjson)
            return {
             "message": "Song found",
             "data": fromjson[0],

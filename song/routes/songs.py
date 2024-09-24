@@ -8,6 +8,7 @@ import re
 from mongoengine import Q
 from pydantic import BaseModel
 from collections import Counter
+import random
 router = APIRouter()
 
 
@@ -75,7 +76,7 @@ async def getSonge(body: SingerSearch, limit: int = Query(10, ge=1), offset: int
         
         tojson = findata.to_json()
         fromjson = json.loads(tojson)
-        
+        random.shuffle(fromjson)
         return {
             "message":"here is songs",
             "data": fromjson,
