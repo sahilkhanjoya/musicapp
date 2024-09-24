@@ -3,7 +3,7 @@ from user.models.usermodel import UserModel, UserTabel
 import json
 router = APIRouter()
 
-@router.get("/api/v1/user-create-login")
+@router.post("/api/v1/user-create-login")
 async def getAllSongs(body: UserModel):
     finduser = UserTabel.objects(identifyer=body.identifyer)
     if finduser :

@@ -57,6 +57,7 @@ async def getArtist():
     data = ArtistTableOrLibrariy.objects.all()
     tojson = data.to_json()
     fromjson = json.loads(tojson)
+    random.shuffle(fromjson)
     return {
         "message":"here is all artist",
         "data": fromjson,
