@@ -1,4 +1,4 @@
-Sno, songs,singer,lyrics,emotion
+Sno,songs,singer,lyrics,emotion
 1,tere hawaale," Arijit,Shilpa | Pritam,Amitabh,Advait","Mainu Chadheya Ishq
 Mein Rang Tera
 Ik Ho Gaya Ang Mera Ang Tera
@@ -1022,7 +1022,8 @@ Tere liye duniya chhod di hai
 Tujhpe hi saans aake ruke
 Main tujhko kitna chahta hoon
 Ye tu kabhi soch na sake.
-",
+
+",
 61,Tum Jo Aaye,"Rahat Fateh Ali Khan,Tulsi Kumar, Pritam","Paaya Maine, Paaya Tumhein, Rab Ne Milaya Tumhein,
 
 Honthon Pe Sajaya Tumhein, Nag Mein Sajaya Tumhein
@@ -2219,7 +2220,8 @@ Woh Nadiya Mein Gote Lagata
 Ulti Dhara Cheerke Tairta Tha Woh
 Baadal Awara Tha Woh
 Yaar Hamara Tha Woh
-Kahan Gaya Usse Dhoondo",
+Kahan Gaya Usse Dhoondo
+",
 85,Woh Din,Pritam,"Yaadon ke purane album mein
 
 Chhupa ke rakhe hain humne woh din
@@ -3359,7 +3361,8 @@ Jaaye wahin le jaaye jahaan
 Besabriyaan, besabriyaan
 
 Besabriyaan, o.. besabriyaan...
-",
+
+",
 100,Mehrama,Pritam | Darshan Raval,"Toota dil ya maine kisi ka toda hai.
 
 Chor gya ya mainy kisi ko chora hai.
@@ -3452,7 +3455,8 @@ Ishq ch doob na mere sikh le tairna
 Mehrma ve mehrma ve mehrma
 
 Pajda hi reha mere kolon hun sikh le thairna
-",
+
+",
 101,Aankhein, Vilen,,
 102,Achyutam Keshavam,Alka Yagnik,,
 103,Bhala,vinay katoch,,

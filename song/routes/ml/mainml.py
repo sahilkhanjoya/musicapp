@@ -6,34 +6,39 @@ def clearNullValue():
    df = df.dropna()
    
 def getSongsByEmotion(emotion):
+    df.columns = df.columns.str.strip()
     filtered_data = df[df['emotion'] == emotion]
-    a = filtered_data.to_json(orient='records')
+    print(filtered_data[['songs', 'singer', 'movie', 'rating']])
+    a = filtered_data.to_json(orient='records',indent=4)
     b = json.loads(a)
-    return b
+    return b[0]["songs"]
    
 def getSongbySingerSong(singer, song):
-    data = df[df[' songs'].str.contains(song, case=False, na=False) & df['singer'].str.contains(singer, case=False, na=False)]
-    a = data.to_json(orient='records')
+    df.columns = df.columns.str.strip()
+    data = df[df['songs'].str.contains(song, case=False, na=False) & df['singer'].str.contains(singer, case=False, na=False)]
+    a = data.to_json(orient='records', indent=4)
     b = json.loads(a)
-    return b
+    return b[0]["songs"]
 
 def playsongbySinger(singer):
     songs = df[df['singer'].str.contains(singer, case=False, na=False)]
-    tojson = songs.to_json(orient='records')
+    tojson = songs.to_json(orient='records', indent=4)
     fromjson = json.loads(tojson)
-    return fromjson
+    return fromjson[0]["songs"]
 
 def playsongFromMovie(song, movie):
-   songdata = df[df[' songs'].str.contains(song, case=False, na=False) & df['movie'].str.contains(movie, case=False, na=False)]
-   tojson = songdata.to_json(orient='records')
+   df.columns = df.columns.str.strip()
+   songdata = df[df['songs'].str.contains(song, case=False, na=False) & df['movie'].str.contains(movie, case=False, na=False)]
+   tojson = songdata.to_json(orient='records', indent=4)
    fromjson = json.loads(tojson)
-   return fromjson
+   return fromjson[0]["songs"]
 
 def searchSongBySongName(songname):
-   song = df[df[' songs'].str.contains(songname, case=False, na=False)]
-   a = song.to_json(orient='records')
+   df.columns = df.columns.str.strip()
+   song = df[df['songs'].str.contains(songname, case=False, na=False)]
+   a = song.to_json(orient='records', indent=4)
    fromjson = json.loads(a)
-   return fromjson
+   return fromjson[0]["songs"]
 
 def toRatingSongsbyEmotion(emotion):
    df.columns = df.columns.str.strip()
@@ -62,7 +67,8 @@ def suggestmemostEmotionongsBySinger(emotion, singer):
     
     
 def searchbyLyrics(lyrcs):
-    songs = df[df['lyrics'].str.contains(lyrcs, case=False, na=False)]
-    tojson = songs.to_json(orient='records')
+    df.columns = df.columns.str.strip()
+    filtered_songs = df[df['lyrics'].str.contains(lyrcs, case=False, na=False)]
+    tojson = filtered_songs.to_json(orient='records',indent=4)
     fromjson = json.loads(tojson)
-    return fromjson
+    return fromjson[0]['songs']
