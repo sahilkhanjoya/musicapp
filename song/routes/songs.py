@@ -8,6 +8,7 @@ import re
 from mongoengine import Q
 from pydantic import BaseModel
 from collections import Counter
+from song.routes.ml.suggestionsong import get_recommendations
 import random
 router = APIRouter()
 
@@ -108,3 +109,8 @@ async def getsearcSonge(singername: str):
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
     
+
+@router.get("/api/v1/suggestionsong/{currentsongname}")
+async def sugggestionson(currentsongname: str):
+    recommended_songs = get_recommendations(currentsongname)
+    return recommended_songs

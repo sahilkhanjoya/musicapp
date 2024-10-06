@@ -16,7 +16,7 @@ async def getAllSongs(body: UserModel):
         }
         
     else:
-        saveuser = UserTabel(body.dict())
+        saveuser = UserTabel(**body.dict())
         saveuser.save()
         tojson = saveuser.to_json()
         fromjson = json.loads(tojson)

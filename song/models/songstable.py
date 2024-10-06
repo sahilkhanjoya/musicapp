@@ -9,6 +9,7 @@ class SongsTable(Document):
     songsaudio = StringField(required=True)
     singer = StringField(required=True)
     lyrics = StringField(required=False)
+    fingerprint = StringField(required=False)
     meta = {'db_alias': 'db1'}
 
 
