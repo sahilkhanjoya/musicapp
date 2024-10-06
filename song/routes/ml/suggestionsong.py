@@ -27,8 +27,8 @@ def get_recommendations(song_title):
     
     # Compute the cosine similarity matrix based on the TF-IDF vectors
     cosine_sim = cosine_similarity(tfidf_matrix, tfidf_matrix)
-        # Get the index of the song that matches the song_title
     
+    # Get the index of the song that matches the song_title
     idx = df.index[df['songs'].str.lower() == song_title.lower()].tolist()
     
     if not idx:
@@ -42,14 +42,15 @@ def get_recommendations(song_title):
     # Sort the songs based on the similarity scores
     sim_scores = sorted(sim_scores, key=lambda x: x[1], reverse=True)
 
-    # Get the indices of the top 10 most similar songs
-    sim_scores = sim_scores[1:20]  # Skip the first one as it's the same song
+    # Get the indices of the top 30 most similar songs
+    sim_scores = sim_scores[1:30]  # Skip the first one as it's the same song
 
     # Get the song indices
     song_indices = [i[0] for i in sim_scores]
 
-    # Return the top 10 most similar songs
-    return df['songs'].iloc[song_indices]
+    # Return the top 30 most similar songs (without indices)
+    return df['songs'].iloc[song_indices].tolist()
 
 # Example usage: Recommend songs similar to 'Kun Faya Kun'
+
 

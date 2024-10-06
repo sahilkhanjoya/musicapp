@@ -113,4 +113,14 @@ async def getsearcSonge(singername: str):
 @router.get("/api/v1/suggestionsong/{currentsongname}")
 async def sugggestionson(currentsongname: str):
     recommended_songs = get_recommendations(currentsongname)
-    return recommended_songs
+    songs = []
+    for name in recommended_songs:
+        findSong = SongsTable.objects(Name__icontains=name).first()
+        tojson = findSong.to_json()
+        fromjson = json.loads(tojson)
+        songs.append(fromjson)
+    return {
+        "message":"Here is Suggestion Songs",
+        "data" : songs,
+        "status": True
+    }
